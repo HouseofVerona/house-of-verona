@@ -1,1 +1,110 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
 
+body{
+background:#0D0D0D;
+color:white;
+overflow-x:hidden;
+}
+
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
+z-index:999;
+}
+
+.logo{
+height:60px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:14px;
+}
+
+.hero{
+height:100vh;
+background:url('assets/hero/hero-main.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero-overlay{
+background:rgba(0,0,0,0.55);
+padding:30px;
+border-radius:20px;
+}
+
+.hero h1{
+font-size:48px;
+color:#D4AF37;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:25px;
+}
+
+.hero-buttons{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.gold-btn{
+background:#D4AF37;
+color:black;
+padding:14px 22px;
+border:none;
+border-radius:30px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.outline-btn{
+background:transparent;
+border:2px solid #D4AF37;
+color:#D4AF37;
+padding:14px 22px;
+border-radius:30px;
+cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+nav{
+display:none;
+}
+
+.logo{
+height:50px;
+}
+
+}
