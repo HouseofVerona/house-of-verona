@@ -1,98 +1,24 @@
-function getImagePath(item){
-const folderMap = { "Black Coffee":"BLACK COFFEE", "Milk Coffee":"MILK COFFEE", "HOV Signature Coffee":"HOV SIGNATURE COFFEE", "Tea Collection":"TEA COLLECTION", "Cold Coffee":"COLD COFFEE", "Coolers":"COOLERS", "Shakes":"SIGNATURE SHAKES", "Wada Pav":"WADA PAV", "Sandwiches":"SANDWICHES", "Pizza":"PIZZA", "Add-Ons":"ADD-ONS" };
-const folder = folderMap[item.category] || "";
-return assets/menu/${folder}/${item.image}; }
-let menuData = [];
-async function loadMenu(){
-const response = await fetch("data/menu.json"); menuData = await response.json();
-displayMenu(menuData); }
-function displayMenu(items){
-const menuContainer = document.getElementById("menuContainer");
-menuContainer.innerHTML = "";
-items.forEach(item => {
-let priceHTML = "";
+const menuContainer = document.getElementById("menu-container");
 
-if(item.sizes){
+fetch("data/menu.json")
+.then(response => response.json())
+.then(products => {
 
-  const firstPrice =
-  Object.values(item.sizes)[0];
+products.forEach(product => {
 
-  priceHTML = `₹${firstPrice}+`;
+const card = document.createElement("div");
 
-}else{
+card.classList.add("product-card");
 
-  priceHTML = `₹${item.price}`;
-}
-
-menuContainer.innerHTML += `
-
-<div class="menu-card">
-
-  <img
-  src="${getImagePath(item)}"
-  alt="${item.name}"
-  loading="lazy">
-
-  <div class="menu-info">
-
-  ${
-  item.bestseller
-  ? '<div class="bestseller">⭐ Bestseller</div>'
-  : ''
-  }
-
-  <div class="menu-name">
-  ${item.name}
-  </div>
-
-  <div class="menu-price">
-  ${priceHTML}
-  </div>
-
-  <button
-  class="add-cart-btn"
-  onclick="addToCart('${item.name}')">
-  Add To Cart
-  </button>
-
-  </div>
-
-</div>
-
+card.innerHTML = `
+<img src="${product.image}" alt="${product.name}">
+<h3>${product.name}</h3>
+<p>₹${product.price}</p>
+<button>Add To Cart</button>
 `;
-}); }
-document.addEventListener("click", e => {
-if(e.target.classList.contains("category-btn")){
-document
-.querySelectorAll(".category-btn")
-.forEach(btn =>
-  btn.classList.remove("active")
-);
 
-e.target.classList.add("active");
+menuContainer.appendChild(card);
 
-const category =
-e.target.dataset.category;
-
-if(category === "all"){
-
-  displayMenu(menuData);
-
-}else{
-
-  const filtered =
-  menuData.filter(item =>
-  item.category === category);
-
-  displayMenu(filtered);
-}
-} });
-document .getElementById("searchInput") .addEventListener("input", function(){
-const term = this.value.toLowerCase();
-const filtered = menuData.filter(item => item.name.toLowerCase().includes(term) );
-displayMenu(filtered);
 });
-function addToCart(product){
-alert(product + " added to cart");
-}
-loadMenu(); }
+
+});
