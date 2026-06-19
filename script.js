@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "918799817395";
+const WHATSAPP_NUMBER = "+918799817395";
 document.addEventListener("DOMContentLoaded", () => {
 const menuContainer = document.getElementById("menu-container"); const cartItemsContainer = document.getElementById("cart-items"); const totalElement = document.getElementById("cart-total"); const checkoutBtn = document.getElementById("checkout-btn");
 let cart = [];
