@@ -331,3 +331,36 @@ bottom:10px;
 }
 
 }
+
+.qty-controls{
+display:flex;
+align-items:center;
+gap:10px;
+margin-top:5px;
+}
+
+.qty-controls button{
+
+width:28px;
+
+height:28px;
+
+border:none;
+
+border-radius:50%;
+
+background:#D4AF37;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+.cart-left{
+
+display:flex;
+
+flex-direction:column;
+
+}
