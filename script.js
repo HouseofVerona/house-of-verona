@@ -110,3 +110,43 @@ totalElement.textContent = total;
 }
 
 });
+
+window.increaseQty = function(name){
+
+const item = cart.find(
+p => p.name === name
+);
+
+if(item){
+
+item.qty++;
+
+renderCart();
+
+}
+
+}
+
+window.decreaseQty = function(name){
+
+const item = cart.find(
+p => p.name === name
+);
+
+if(item){
+
+item.qty--;
+
+if(item.qty <= 0){
+
+cart = cart.filter(
+p => p.name !== name
+);
+
+}
+
+renderCart();
+
+}
+
+}
