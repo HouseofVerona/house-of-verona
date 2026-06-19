@@ -1,114 +1,32 @@
-[
-  {
-    "id": 1,
-    "name": "Espresso",
-    "price": 49,
-    "image": "assets/menu/espresso.jpg",
-    "category": "Coffee"
-  },
-  {
-    "id": 2,
-    "name": "Americano",
-    "price": 59,
-    "image": "assets/menu/americano.jpg",
-    "category": "Coffee"
-  },
-  {
-    "id": 3,
-    "name": "Cappuccino",
-    "price": 79,
-    "image": "assets/menu/cappuccino.jpg",
-    "category": "Coffee"
-  },
-  {
-    "id": 4,
-    "name": "Latte",
-    "price": 89,
-    "image": "assets/menu/latte.jpg",
-    "category": "Coffee"
-  },
-  {
-    "id": 5,
-    "name": "Mocha",
-    "price": 99,
-    "image": "assets/menu/mocha.jpg",
-    "category": "Coffee"
-  },
-  {
-    "id": 6,
-    "name": "Vanilla Latte",
-    "price": 109,
-    "image": "assets/menu/vanilla-latte.jpg",
-    "category": "Coffee"
-  },
-  {
-    "id": 7,
-    "name": "Caramel Latte",
-    "price": 119,
-    "image": "assets/menu/caramel-latte.jpg",
-    "category": "Coffee"
-  },
-  {
-    "id": 8,
-    "name": "Classic Cold Coffee",
-    "price": 99,
-    "image": "assets/menu/classic-cold-coffee.jpg",
-    "category": "Cold Coffee"
-  },
-  {
-    "id": 9,
-    "name": "Iced Latte",
-    "price": 109,
-    "image": "assets/menu/iced-latte.jpg",
-    "category": "Cold Coffee"
-  },
-  {
-    "id": 10,
-    "name": "Premium Cold Coffee",
-    "price": 129,
-    "image": "assets/menu/premium-cold-coffee.jpg",
-    "category": "Cold Coffee"
-  },
-  {
-    "id": 11,
-    "name": "Classic Chai Small",
-    "price": 15,
-    "image": "assets/menu/classic-chai.jpg",
-    "category": "Chai"
-  },
-  {
-    "id": 12,
-    "name": "Classic Chai Regular",
-    "price": 25,
-    "image": "assets/menu/classic-chai.jpg",
-    "category": "Chai"
-  },
-  {
-    "id": 13,
-    "name": "Classic Chai Large",
-    "price": 35,
-    "image": "assets/menu/classic-chai.jpg",
-    "category": "Chai"
-  },
-  {
-    "id": 14,
-    "name": "Masala Chai Small",
-    "price": 15,
-    "image": "assets/menu/masala-chai.jpg",
-    "category": "Chai"
-  },
-  {
-    "id": 15,
-    "name": "Masala Chai Regular",
-    "price": 25,
-    "image": "assets/menu/masala-chai.jpg",
-    "category": "Chai"
-  },
-  {
-    "id": 16,
-    "name": "Masala Chai Large",
-    "price": 35,
-    "image": "assets/menu/masala-chai.jpg",
-    "category": "Chai"
-  }
+[ { "id": 1, "name": "Espresso", "price": 49, "category": "Black Coffee", "image": "assets/menu/espresso.jpg", "featured": true },
+  
+{ "id": 2, "name": "Doppio", "price": 69, "category": "Black Coffee", "image": "assets/menu/doppio.jpg" }, 
+  
+{ "id": 3, "name": "Americano", "price": 79, "category": "Black Coffee", "image": "assets/menu/americano.jpg" }, 
+  
+{ "id": 4, "name": "Shakerato", "price": 89, "category": "Black Coffee", "image": "assets/menu/shakerato.jpg" }, 
+  
+{ "id": 5, "name": "Macchiato", "price": 89, "category": "Black Coffee", "image": "assets/menu/macchiato.jpg" }, 
+  
+{ "id": 6, "name": "Irish Coffee", "price": 99, "category": "Black Coffee", "image": "assets/menu/irish-coffee.jpg" }, 
+  
+{ "id": 7, "name": "Cortado", "price": 69, "category": "Milk Coffee", "image": "assets/menu/cortado.jpg" }, 
+  
+{ "id": 8, "name": "Cappuccino Regular", "price": 99, "category": "Milk Coffee", "image": "assets/menu/cappuccino.jpg" }, 
+  
+{ "id": 9, "name": "Cappuccino Large", "price": 129, "category": "Milk Coffee", "image": "assets/menu/cappuccino.jpg" }, 
+  
+{ "id": 10, "name": "Caffe Latte Regular", "price": 99, "category": "Milk Coffee", "image": "assets/menu/caffe-latte.jpg" }, 
+  
+{ "id": 11, "name": "Caffe Latte Large", "price": 129, "category": "Milk Coffee", "image": "assets/menu/caffe-latte.jpg" },
+  
+{ "id": 12, "name": "Flat White", "price": 99, "category": "Milk Coffee", "image": "assets/menu/flat-white.jpg" },
+  
+{ "id": 13, "name": "Spanish Latte", "price": 149, "category": "Milk Coffee", "image": "assets/menu/spanish-latte.jpg" },
+  
+{ "id": 14, "name": "Honey Cinnamon Latte", "price": 149, "category": "Milk Coffee", "image": "assets/menu/honey-cinnamon-latte.jpg" },
+  
+{ "id": 15, "name": "Salted Caramel Latte Regular", "price": 119, "category": "Milk Coffee", "image": "assets/menu/salted-caramel-latte.jpg" },
+  
+{ "id": 16, "name": "Salted Caramel Latte Large", "price": 149, "category": "Milk Coffee", "image": "assets/menu/salted-caramel-latte.jpg" }
 ]
