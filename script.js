@@ -23,30 +23,34 @@ card.innerHTML = `
 <button class="add-btn">Add To Cart</button>
 `;
 
-card.querySelector(".add-btn")
-.addEventListener("click", () => addToCart(product));
+card.querySelector(".add-btn").addEventListener("click", () => {
+addToCart(product);
+});
 
 menuContainer.appendChild(card);
 
 });
 
+})
+.catch(error => {
+console.error("Menu loading error:", error);
 });
 
 function addToCart(product){
 
-const existing = cart.find(
+const existingItem = cart.find(
 item => item.name === product.name
 );
 
-if(existing){
+if(existingItem){
 
-existing.qty++;
+existingItem.qty++;
 
 }else{
 
 cart.push({
 ...product,
-qty:1
+qty: 1
 });
 
 }
@@ -55,63 +59,7 @@ renderCart();
 
 }
 
-function renderCart(){
-
-cartItemsContainer.innerHTML = "";
-
-let total = 0;
-
-cart.forEach(item => {
-
-const lineTotal = item.price * item.qty;
-
-total += lineTotal;
-
-const row = document.createElement("div");
-
-row.classList.add("cart-item");
-
-row.innerHTML = `
-
-<div class="cart-left">
-
-<strong>${item.name}</strong>
-
-<div class="qty-controls">
-
-<button onclick="decreaseQty('${item.name}')">−</button>
-
-<span>${item.qty}</span>
-
-<button onclick="increaseQty('${item.name}')">+</button>
-
-</div>
-
-</div>
-
-<div>
-
-₹${lineTotal}
-
-</div>
-
-`;
-
-cartItemsContainer.appendChild(row);
-
-});
-
-totalElement.textContent = total;
-
-}
-
-totalElement.textContent = total;
-
-}
-
-});
-
-window.increaseQty = function(name){
+function increaseQty(name){
 
 const item = cart.find(
 p => p.name === name
@@ -120,14 +68,13 @@ p => p.name === name
 if(item){
 
 item.qty++;
-
 renderCart();
 
 }
 
 }
 
-window.decreaseQty = function(name){
+function decreaseQty(name){
 
 const item = cart.find(
 p => p.name === name
@@ -150,3 +97,57 @@ renderCart();
 }
 
 }
+
+function renderCart(){
+
+cartItemsContainer.innerHTML = "";
+
+let total = 0;
+
+cart.forEach(item => {
+
+const lineTotal = item.price * item.qty;
+
+total += lineTotal;
+
+const row = document.createElement("div");
+
+row.classList.add("cart-item");
+
+row.innerHTML = `
+<div class="cart-left">
+<strong>${item.name}</strong>
+
+<div class="qty-controls">
+
+<button class="minus-btn">−</button>
+
+<span>${item.qty}</span>
+
+<button class="plus-btn">+</button>
+
+</div>
+</div>
+
+<div>
+₹${lineTotal}
+</div>
+`;
+
+row.querySelector(".plus-btn").addEventListener("click", () => {
+increaseQty(item.name);
+});
+
+row.querySelector(".minus-btn").addEventListener("click", () => {
+decreaseQty(item.name);
+});
+
+cartItemsContainer.appendChild(row);
+
+});
+
+totalElement.textContent = total;
+
+}
+
+});
