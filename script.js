@@ -23,9 +23,8 @@ card.innerHTML = `
 <button class="add-btn">Add To Cart</button>
 `;
 
-card.querySelector(".add-btn").addEventListener("click", () => {
-addToCart(product);
-});
+card.querySelector(".add-btn")
+.addEventListener("click", () => addToCart(product));
 
 menuContainer.appendChild(card);
 
@@ -35,7 +34,22 @@ menuContainer.appendChild(card);
 
 function addToCart(product){
 
-cart.push(product);
+const existing = cart.find(
+item => item.name === product.name
+);
+
+if(existing){
+
+existing.qty++;
+
+}else{
+
+cart.push({
+...product,
+qty:1
+});
+
+}
 
 renderCart();
 
@@ -49,15 +63,25 @@ let total = 0;
 
 cart.forEach(item => {
 
-total += Number(item.price);
+const lineTotal =
+item.price * item.qty;
+
+total += lineTotal;
 
 const row = document.createElement("div");
 
 row.classList.add("cart-item");
 
 row.innerHTML = `
-<span>${item.name}</span>
-<span>₹${item.price}</span>
+<div>
+<strong>${item.name}</strong>
+<br>
+Qty: ${item.qty}
+</div>
+
+<div>
+₹${lineTotal}
+</div>
 `;
 
 cartItemsContainer.appendChild(row);
