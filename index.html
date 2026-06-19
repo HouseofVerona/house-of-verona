@@ -156,6 +156,7 @@ Pizza
 </section>
 
 <script src="script.js"></script>
+
 <div id="cart-panel">
 
 <h3>🛒 Your Order</h3>
@@ -166,8 +167,32 @@ Pizza
 Total: ₹<span id="cart-total">0</span>
 </div>
 
+<input
+type="text"
+id="customer-name"
+placeholder="Your Name"
+>
+
+<input
+type="tel"
+id="customer-mobile"
+placeholder="Mobile Number"
+>
+
+<select id="order-type">
+
+<option value="Takeaway">
+Takeaway
+</option>
+
+<option value="Dine In">
+Dine In
+</option>
+
+</select>
+
 <button id="checkout-btn">
-Checkout
+Place Order
 </button>
 
 </div>
