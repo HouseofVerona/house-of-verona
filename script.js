@@ -63,8 +63,7 @@ let total = 0;
 
 cart.forEach(item => {
 
-const lineTotal =
-item.price * item.qty;
+const lineTotal = item.price * item.qty;
 
 total += lineTotal;
 
@@ -73,20 +72,38 @@ const row = document.createElement("div");
 row.classList.add("cart-item");
 
 row.innerHTML = `
-<div>
+
+<div class="cart-left">
+
 <strong>${item.name}</strong>
-<br>
-Qty: ${item.qty}
+
+<div class="qty-controls">
+
+<button onclick="decreaseQty('${item.name}')">−</button>
+
+<span>${item.qty}</span>
+
+<button onclick="increaseQty('${item.name}')">+</button>
+
+</div>
+
 </div>
 
 <div>
+
 ₹${lineTotal}
+
 </div>
+
 `;
 
 cartItemsContainer.appendChild(row);
 
 });
+
+totalElement.textContent = total;
+
+}
 
 totalElement.textContent = total;
 
