@@ -1,20 +1,11 @@
-[
-  {
-    "id": 1,
-    "name": "Espresso",
-    "category": "Black Coffee",
-    "price": 49,
-    "image": "assets/menu/espresso.jpg",
-    "bestseller": true
-  },
-  {
-    "id": 2,
-    "name": "Cappuccino",
-    "category": "Milk Coffee",
-    "sizes": {
-      "Regular": 99,
-      "Large": 129
-    },
-    "image": "assets/menu/cappuccino.jpg"
-  }
-]
+[ { "id":1, "name":"Espresso", "category":"Black Coffee", "price":49, "image":"espresso.jpg", "bestseller":true }, { "id":2, "name":"Doppio", "category":"Black Coffee", "price":69, "image":"doppio.jpg" }, { "id":3, "name":"Americano", "category":"Black Coffee", "price":79, "image":"americano.jpg" }, { "id":4, "name":"Shakerato", "category":"Black Coffee", "price":89, "image":"shakerato.jpg" }, { "id":5, "name":"Macchiato", "category":"Black Coffee", "price":89, "image":"macchiato.jpg" }, { "id":6, "name":"Irish Coffee", "category":"Black Coffee", "price":99, "image":"irish-coffee.jpg" },
+{ "id":7, "name":"Cortado", "category":"Milk Coffee", "price":69, "image":"cortado.jpg" }, { "id":8, "name":"Cappuccino", "category":"Milk Coffee", "sizes":{"Regular":99,"Large":129}, "image":"cappuccino.jpg" }, { "id":9, "name":"Caffe Latte", "category":"Milk Coffee", "sizes":{"Regular":99,"Large":129}, "image":"caffe-latte.jpg" }, { "id":10, "name":"Flat White", "category":"Milk Coffee", "price":99, "image":"flat-white.jpg" }, { "id":11, "name":"Spanish Latte", "category":"Milk Coffee", "price":149, "image":"spanish-latte.jpg" }, { "id":12, "name":"Honey Cinnamon Latte", "category":"Milk Coffee", "price":149, "image":"honey-cinnamon-latte.jpg" }, { "id":13, "name":"Salted Caramel Latte", "category":"Milk Coffee", "sizes":{"Regular":119,"Large":149}, "image":"salted-caramel-latte.jpg" }, { "id":14, "name":"Dark Mocha", "category":"Milk Coffee", "price":99, "image":"dark-mocha.jpg" }, { "id":15, "name":"Lotus Biscoff Latte", "category":"Milk Coffee", "sizes":{"Regular":129,"Large":149}, "image":"lotus-biscoff-latte.jpg" }, { "id":16, "name":"Ferrero Latte", "category":"Milk Coffee", "sizes":{"Regular":149,"Large":169}, "image":"ferrero-latte.jpg", "bestseller":true }, { "id":17, "name":"Rose Latte", "category":"Milk Coffee", "price":129, "image":"rose-latte.jpg" }, { "id":18, "name":"Affogato", "category":"Milk Coffee", "price":129, "image":"affogato.jpg" },
+{ "id":19, "name":"HOV Signature Latte", "category":"HOV Signature Coffee", "price":149, "image":"hov-signature-latte.jpg" }, { "id":20, "name":"HOV Royal Coffee", "category":"HOV Signature Coffee", "price":199, "image":"hov-royal-coffee.jpg" }, { "id":21, "name":"HOV Reserve Brew", "category":"HOV Signature Coffee", "price":229, "image":"hov-reserve-brew.jpg" }, { "id":22, "name":"HOV Verona Signature Coffee", "category":"HOV Signature Coffee", "price":249, "image":"hov-verona-signature-coffee.jpg", "bestseller":true },
+{ "id":23, "name":"Regular Tea", "category":"Tea Collection", "sizes":{"Small":15,"Regular":25,"Large":35}, "image":"regular-tea.jpg", "bestseller":true }, { "id":24, "name":"Special Weekly Tea", "category":"Tea Collection", "sizes":{"Small":29,"Regular":39,"Large":49}, "image":"special-weekly-tea.jpg" }, { "id":25, "name":"Premium Black Chai", "category":"Tea Collection", "price":20, "image":"premium-black-chai.jpg" }, { "id":26, "name":"HOV Verona Signature Tea", "category":"Tea Collection", "price":99, "image":"hov-verona-signature-tea.jpg" },
+{ "id":27, "name":"Iced Latte", "category":"Cold Coffee", "price":99, "image":"iced-latte.jpg" }, { "id":28, "name":"Cold Brew", "category":"Cold Coffee", "price":99, "image":"cold-brew.jpg" }, { "id":29, "name":"Classic Cold Brew", "category":"Cold Coffee", "price":129, "image":"classic-cold-brew.jpg" },
+{ "id":30, "name":"Classic Mojito", "category":"Coolers", "price":79, "image":"classic-mojito.jpg" }, { "id":31, "name":"Blue Lagoon", "category":"Coolers", "price":99, "image":"blue-lagoon.jpg" }, { "id":32, "name":"Watermelon Mint Cooler", "category":"Coolers", "price":99, "image":"watermelon-mint-cooler.jpg" }, { "id":33, "name":"Lemon Iced Cooler", "category":"Coolers", "price":79, "image":"lemon-iced-cooler.jpg" },
+{ "id":34, "name":"Belgian Chocolate Shake", "category":"Shakes", "price":149, "image":"belgian-chocolate-shake.jpg" }, { "id":35, "name":"Lotus Biscoff Shake", "category":"Shakes", "price":169, "image":"lotus-biscoff-shake.jpg", "bestseller":true }, { "id":36, "name":"Ferrero Hazelnut Shake", "category":"Shakes", "price":199, "image":"ferrero-hazelnut-shake.jpg" }, { "id":37, "name":"Vanilla Caramel Shake", "category":"Shakes", "price":199, "image":"vanilla-caramel-shake.jpg" },
+{ "id":38, "name":"Classic Wada Pav", "category":"Wada Pav", "price":35, "image":"classic-wada-pav.jpg", "bestseller":true }, { "id":39, "name":"Crispy Wada Pav", "category":"Wada Pav", "price":45, "image":"crispy-wada-pav.jpg" }, { "id":40, "name":"Peri Peri Wada Pav", "category":"Wada Pav", "price":45, "image":"peri-peri-wada-pav.jpg" }, { "id":41, "name":"HOV Special Wada Pav", "category":"Wada Pav", "price":49, "image":"hov-special-wada-pav.jpg" },
+{ "id":42, "name":"Cheese Corn Sandwich", "category":"Sandwiches", "price":99, "image":"cheese-corn-sandwich.jpg" }, { "id":43, "name":"HOV Special Sandwich", "category":"Sandwiches", "price":149, "image":"hov-special-sandwich.jpg" },
+{ "id":44, "name":"HOV Special Pizza", "category":"Pizza", "price":169, "image":"hov-special-pizza.jpg" },
+{ "id":45, "name":"Extra Espresso Shot", "category":"Add-Ons", "price":15, "image":"extra-espresso-shot.jpg" }, { "id":46, "name":"Flavour Syrup", "category":"Add-Ons", "price":10, "image":"flavour-syrup.jpg" } ]
