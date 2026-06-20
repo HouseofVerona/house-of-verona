@@ -251,7 +251,12 @@ description: "Takeaway Order",
 
 order_id: order.id,
 
-handler: function () {
+handler: function (response) {
+
+alert(
+"Payment Success: " +
+response.razorpay_payment_id
+);
 
 window.open(
 whatsappURL,
