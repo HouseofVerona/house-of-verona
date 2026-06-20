@@ -273,11 +273,11 @@ rzp.open();
 }
 catch(error){
 
-alert(
-"Payment system unavailable. Please try again."
-);
-
 console.error(error);
+
+alert(
+"ERROR: " + error.message
+);
 
 }
 
