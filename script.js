@@ -254,14 +254,10 @@ order_id: order.id,
 handler: function (response) {
 
 alert(
-"Payment Success: " +
-response.razorpay_payment_id
+"Payment Successful!\nOrder will now open in WhatsApp."
 );
 
-window.open(
-whatsappURL,
-"_blank"
-);
+window.location.href = whatsappURL;
 
 },
 
