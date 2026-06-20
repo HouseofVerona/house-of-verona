@@ -149,6 +149,142 @@ totalElement.textContent = total;
 
 const checkoutBtn = document.getElementById("checkout-btn");
 
+checkoutBtn.addEventListener("click", async () => {
+
+const customerName =
+document.getElementById("customer-name").value.trim();
+
+const customerMobile =
+document.getElementById("customer-mobile").value.trim();
+
+const orderType =
+document.getElementById("order-type").value;
+
+if(customerName === ""){
+alert("Please enter your name");
+return;
+}
+
+if(customerMobile === ""){
+alert("Please enter mobile number");
+return;
+}
+
+if(cart.length === 0){
+alert("Your cart is empty");
+return;
+}
+
+let total = 0;
+
+let message =
+`☕ HOUSE OF VERONA ORDER
+
+Name: ${customerName}
+
+Mobile: ${customerMobile}
+
+Order Type: ${orderType}
+
+---------------------
+
+`;
+
+cart.forEach(item => {
+
+const lineTotal = item.price * item.qty;
+
+total += lineTotal;
+
+message +=
+`${item.name} x${item.qty} = ₹${lineTotal}\n`;
+
+});
+
+message += `
+
+---------------------
+
+TOTAL = ₹${total}
+
+Luxury in Every Sip.
+`;
+
+const whatsappURL =
+`https://wa.me/918799817395?text=${encodeURIComponent(message)}`;
+
+if(orderType === "Dine In"){
+
+window.open(whatsappURL, "_blank");
+return;
+
+}
+
+try {
+
+const response = await fetch(
+"https://hov-backend.houseofverona.workers.dev/create-order",
+{
+method: "POST",
+headers: {
+"Content-Type": "application/json"
+},
+body: JSON.stringify({
+amount: total
+})
+}
+);
+
+const order = await response.json();
+
+const options = {
+
+key: "rzp_live_T3bRWO413Cvs1R",
+
+amount: order.amount,
+
+currency: "INR",
+
+name: "House of Verona",
+
+description: "Takeaway Order",
+
+order_id: order.id,
+
+handler: function () {
+
+window.open(
+whatsappURL,
+"_blank"
+);
+
+},
+
+theme: {
+color: "#C8A96B"
+}
+
+};
+
+const rzp = new Razorpay(options);
+
+rzp.open();
+
+}
+catch(error){
+
+alert(
+"Payment system unavailable. Please try again."
+);
+
+console.error(error);
+
+}
+
+});
+
+});
+
 checkoutBtn.addEventListener("click", () => {
 
 const customerName =
