@@ -257,7 +257,7 @@ alert(
 "Payment Successful!\nOrder will now open in WhatsApp."
 );
 
-window.location.href = whatsappURL;
+window.location.href = "https://wa.me/918799817395?text=TEST_ORDER";
 
 },
 
