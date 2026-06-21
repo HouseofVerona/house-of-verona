@@ -253,11 +253,26 @@ order_id: order.id,
 
 handler: function (response) {
 
-alert(
-"Payment Successful!\nOrder will now open in WhatsApp."
-);
+const modal =
+document.getElementById("success-modal");
+
+const paymentId =
+document.getElementById("payment-id");
+
+const whatsappBtn =
+document.getElementById("send-whatsapp-btn");
+
+paymentId.innerText =
+"Payment ID: " +
+response.razorpay_payment_id;
+
+modal.style.display = "flex";
+
+whatsappBtn.onclick = () => {
 
 window.location.href = whatsappURL;
+
+};
 
 },
 
