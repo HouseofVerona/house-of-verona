@@ -253,14 +253,22 @@ order_id: order.id,
 
 handler: function (response) {
 
+alert("HANDLER STARTED");
+
 const modal =
 document.getElementById("success-modal");
+
+alert("MODAL FOUND: " + (modal !== null));
 
 const paymentId =
 document.getElementById("payment-id");
 
+alert("PAYMENT ID FOUND: " + (paymentId !== null));
+
 const whatsappBtn =
 document.getElementById("send-whatsapp-btn");
+
+alert("BUTTON FOUND: " + (whatsappBtn !== null));
 
 paymentId.innerText =
 "Payment ID: " +
@@ -274,7 +282,7 @@ window.location.href = whatsappURL;
 
 };
 
-},
+}, 
 
 theme: {
 color: "#C8A96B"
