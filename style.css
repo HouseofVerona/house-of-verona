@@ -429,3 +429,47 @@ font-weight:bold;
 margin-top:20px;
 width:100%;
 }
+
+.hov-rewards{
+padding:60px 20px;
+text-align:center;
+background:#0f0f0f;
+}
+
+.hov-rewards h2{
+color:#C8A96B;
+font-size:32px;
+margin-bottom:10px;
+}
+
+.reward-tagline{
+color:#fff;
+margin-bottom:30px;
+font-size:18px;
+}
+
+.reward-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+max-width:1200px;
+margin:auto;
+}
+
+.reward-card{
+background:#171717;
+border:1px solid #C8A96B;
+border-radius:18px;
+padding:25px;
+color:#fff;
+transition:.3s;
+}
+
+.reward-card:hover{
+transform:translateY(-6px);
+}
+
+.reward-card h3{
+color:#C8A96B;
+margin-bottom:10px;
+}
